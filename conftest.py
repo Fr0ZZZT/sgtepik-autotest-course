@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 
 def pytest_addoption(parser):
         parser.addoption('--language', action='store', default=None,
-                     help="Choose the language: en, ru, es..")
+                     help="Choose the language: en, ru, es, fr..")
 
 @pytest.fixture(scope="function")
 def browser(request):
@@ -16,3 +16,4 @@ def browser(request):
     yield browser
     print("\nquit browser..")
     browser.quit()
+
